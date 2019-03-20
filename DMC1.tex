@@ -120,3 +120,1629 @@ end
 
 
 \end{lstlisting}
+
+\section{Ręczne strojenie regulatora DMC}
+
+Regulator strojono metodą eksperymentalną. Wybrano kilka arbitralnych wartosci parametrów regulatora, pamiętając przy tym, że $N_{\mathrm{u}} \leq N \leq D$. Następnie przetestowano ich kombinacje i przeprowadzono symulacje. Wykres przedstawiono poniżej:
+
+
+
+\centering
+\begin{figure}
+{\centering
+\textbf{Error = 3.9763}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=25_Nu=5_lambda=0.2error=_3.9763.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=25_Nu=5_lambda=0.2error=_3.9763.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 25, Nu = 5, $\lambda$ = 0.2}
+\label{DMC_EXP_N=25_Nu=5_lambda=0.2}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 4.0583}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=25_Nu=5_lambda=1error=_4.0583.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=25_Nu=5_lambda=1error=_4.0583.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 25, Nu = 5, $\lambda$ = 1}
+\label{DMC_EXP_N=25_Nu=5_lambda=1}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 7.592}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=25_Nu=5_lambda=5error=_7.592.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=25_Nu=5_lambda=5error=_7.592.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 25, Nu = 5, $\lambda$ = 5}
+\label{DMC_EXP_N=25_Nu=5_lambda=5}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 3.9754}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=25_Nu=10_lambda=0.2error=_3.9754.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=25_Nu=10_lambda=0.2error=_3.9754.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 25, Nu = 10, $\lambda$ = 0.2}
+\label{DMC_EXP_N=25_Nu=10_lambda=0.2}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 4.0671}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=25_Nu=10_lambda=1error=_4.0671.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=25_Nu=10_lambda=1error=_4.0671.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 25, Nu = 10, $\lambda$ = 1}
+\label{DMC_EXP_N=25_Nu=10_lambda=1}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 7.6117}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=25_Nu=10_lambda=5error=_7.6117.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=25_Nu=10_lambda=5error=_7.6117.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 25, Nu = 10, $\lambda$ = 5}
+\label{DMC_EXP_N=25_Nu=10_lambda=5}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 3.9755}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=25_Nu=15_lambda=0.2error=_3.9755.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=25_Nu=15_lambda=0.2error=_3.9755.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 25, Nu = 15, $\lambda$ = 0.2}
+\label{DMC_EXP_N=25_Nu=15_lambda=0.2}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 4.0673}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=25_Nu=15_lambda=1error=_4.0673.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=25_Nu=15_lambda=1error=_4.0673.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 25, Nu = 15, $\lambda$ = 1}
+\label{DMC_EXP_N=25_Nu=15_lambda=1}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 7.6125}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=25_Nu=15_lambda=5error=_7.6125.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=25_Nu=15_lambda=5error=_7.6125.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 25, Nu = 15, $\lambda$ = 5}
+\label{DMC_EXP_N=25_Nu=15_lambda=5}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 3.9755}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=25_Nu=20_lambda=0.2error=_3.9755.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=25_Nu=20_lambda=0.2error=_3.9755.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 25, Nu = 20, $\lambda$ = 0.2}
+\label{DMC_EXP_N=25_Nu=20_lambda=0.2}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 4.0673}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=25_Nu=20_lambda=1error=_4.0673.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=25_Nu=20_lambda=1error=_4.0673.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 25, Nu = 20, $\lambda$ = 1}
+\label{DMC_EXP_N=25_Nu=20_lambda=1}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 7.6125}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=25_Nu=20_lambda=5error=_7.6125.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=25_Nu=20_lambda=5error=_7.6125.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 25, Nu = 20, $\lambda$ = 5}
+\label{DMC_EXP_N=25_Nu=20_lambda=5}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 3.9743}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=50_Nu=5_lambda=0.2error=_3.9743.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=50_Nu=5_lambda=0.2error=_3.9743.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 50, Nu = 5, $\lambda$ = 0.2}
+\label{DMC_EXP_N=50_Nu=5_lambda=0.2}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 4.1697}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=50_Nu=5_lambda=1error=_4.1697.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=50_Nu=5_lambda=1error=_4.1697.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 50, Nu = 5, $\lambda$ = 1}
+\label{DMC_EXP_N=50_Nu=5_lambda=1}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 5.3484}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=50_Nu=5_lambda=5error=_5.3484.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=50_Nu=5_lambda=5error=_5.3484.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 50, Nu = 5, $\lambda$ = 5}
+\label{DMC_EXP_N=50_Nu=5_lambda=5}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 3.9759}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=50_Nu=10_lambda=0.2error=_3.9759.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=50_Nu=10_lambda=0.2error=_3.9759.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 50, Nu = 10, $\lambda$ = 0.2}
+\label{DMC_EXP_N=50_Nu=10_lambda=0.2}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 4.0867}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=50_Nu=10_lambda=1error=_4.0867.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=50_Nu=10_lambda=1error=_4.0867.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 50, Nu = 10, $\lambda$ = 1}
+\label{DMC_EXP_N=50_Nu=10_lambda=1}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 5.5964}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=50_Nu=10_lambda=5error=_5.5964.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=50_Nu=10_lambda=5error=_5.5964.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 50, Nu = 10, $\lambda$ = 5}
+\label{DMC_EXP_N=50_Nu=10_lambda=5}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 3.9755}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=50_Nu=15_lambda=0.2error=_3.9755.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=50_Nu=15_lambda=0.2error=_3.9755.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 50, Nu = 15, $\lambda$ = 0.2}
+\label{DMC_EXP_N=50_Nu=15_lambda=0.2}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 4.0746}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=50_Nu=15_lambda=1error=_4.0746.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=50_Nu=15_lambda=1error=_4.0746.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 50, Nu = 15, $\lambda$ = 1}
+\label{DMC_EXP_N=50_Nu=15_lambda=1}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 5.6975}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=50_Nu=15_lambda=5error=_5.6975.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=50_Nu=15_lambda=5error=_5.6975.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 50, Nu = 15, $\lambda$ = 5}
+\label{DMC_EXP_N=50_Nu=15_lambda=5}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 3.9755}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=50_Nu=20_lambda=0.2error=_3.9755.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=50_Nu=20_lambda=0.2error=_3.9755.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 50, Nu = 20, $\lambda$ = 0.2}
+\label{DMC_EXP_N=50_Nu=20_lambda=0.2}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 4.0777}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=50_Nu=20_lambda=1error=_4.0777.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=50_Nu=20_lambda=1error=_4.0777.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 50, Nu = 20, $\lambda$ = 1}
+\label{DMC_EXP_N=50_Nu=20_lambda=1}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 5.7314}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=50_Nu=20_lambda=5error=_5.7314.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=50_Nu=20_lambda=5error=_5.7314.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 50, Nu = 20, $\lambda$ = 5}
+\label{DMC_EXP_N=50_Nu=20_lambda=5}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 3.9745}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=75_Nu=5_lambda=0.2error=_3.9745.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=75_Nu=5_lambda=0.2error=_3.9745.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 75, Nu = 5, $\lambda$ = 0.2}
+\label{DMC_EXP_N=75_Nu=5_lambda=0.2}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 4.186}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=75_Nu=5_lambda=1error=_4.186.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=75_Nu=5_lambda=1error=_4.186.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 75, Nu = 5, $\lambda$ = 1}
+\label{DMC_EXP_N=75_Nu=5_lambda=1}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 5.2971}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=75_Nu=5_lambda=5error=_5.2971.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=75_Nu=5_lambda=5error=_5.2971.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 75, Nu = 5, $\lambda$ = 5}
+\label{DMC_EXP_N=75_Nu=5_lambda=5}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 3.9761}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=75_Nu=10_lambda=0.2error=_3.9761.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=75_Nu=10_lambda=0.2error=_3.9761.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 75, Nu = 10, $\lambda$ = 0.2}
+\label{DMC_EXP_N=75_Nu=10_lambda=0.2}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 4.067}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=75_Nu=10_lambda=1error=_4.067.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=75_Nu=10_lambda=1error=_4.067.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 75, Nu = 10, $\lambda$ = 1}
+\label{DMC_EXP_N=75_Nu=10_lambda=1}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 5.6232}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=75_Nu=10_lambda=5error=_5.6232.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=75_Nu=10_lambda=5error=_5.6232.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 75, Nu = 10, $\lambda$ = 5}
+\label{DMC_EXP_N=75_Nu=10_lambda=5}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 3.9755}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=75_Nu=15_lambda=0.2error=_3.9755.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=75_Nu=15_lambda=0.2error=_3.9755.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 75, Nu = 15, $\lambda$ = 0.2}
+\label{DMC_EXP_N=75_Nu=15_lambda=0.2}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 4.0645}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=75_Nu=15_lambda=1error=_4.0645.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=75_Nu=15_lambda=1error=_4.0645.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 75, Nu = 15, $\lambda$ = 1}
+\label{DMC_EXP_N=75_Nu=15_lambda=1}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 5.7466}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=75_Nu=15_lambda=5error=_5.7466.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=75_Nu=15_lambda=5error=_5.7466.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 75, Nu = 15, $\lambda$ = 5}
+\label{DMC_EXP_N=75_Nu=15_lambda=5}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 3.9755}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=75_Nu=20_lambda=0.2error=_3.9755.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=75_Nu=20_lambda=0.2error=_3.9755.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 75, Nu = 20, $\lambda$ = 0.2}
+\label{DMC_EXP_N=75_Nu=20_lambda=0.2}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 4.0753}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=75_Nu=20_lambda=1error=_4.0753.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=75_Nu=20_lambda=1error=_4.0753.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 75, Nu = 20, $\lambda$ = 1}
+\label{DMC_EXP_N=75_Nu=20_lambda=1}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 5.7773}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=75_Nu=20_lambda=5error=_5.7773.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=75_Nu=20_lambda=5error=_5.7773.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 75, Nu = 20, $\lambda$ = 5}
+\label{DMC_EXP_N=75_Nu=20_lambda=5}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 3.9747}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=100_Nu=5_lambda=0.2error=_3.9747.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=100_Nu=5_lambda=0.2error=_3.9747.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 100, Nu = 5, $\lambda$ = 0.2}
+\label{DMC_EXP_N=100_Nu=5_lambda=0.2}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 4.1822}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=100_Nu=5_lambda=1error=_4.1822.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=100_Nu=5_lambda=1error=_4.1822.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 100, Nu = 5, $\lambda$ = 1}
+\label{DMC_EXP_N=100_Nu=5_lambda=1}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 5.3371}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=100_Nu=5_lambda=5error=_5.3371.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=100_Nu=5_lambda=5error=_5.3371.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 100, Nu = 5, $\lambda$ = 5}
+\label{DMC_EXP_N=100_Nu=5_lambda=5}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 3.9762}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=100_Nu=10_lambda=0.2error=_3.9762.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=100_Nu=10_lambda=0.2error=_3.9762.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 100, Nu = 10, $\lambda$ = 0.2}
+\label{DMC_EXP_N=100_Nu=10_lambda=0.2}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 4.0589}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=100_Nu=10_lambda=1error=_4.0589.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=100_Nu=10_lambda=1error=_4.0589.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 100, Nu = 10, $\lambda$ = 1}
+\label{DMC_EXP_N=100_Nu=10_lambda=1}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 5.6774}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=100_Nu=10_lambda=5error=_5.6774.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=100_Nu=10_lambda=5error=_5.6774.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 100, Nu = 10, $\lambda$ = 5}
+\label{DMC_EXP_N=100_Nu=10_lambda=5}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 3.9754}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=100_Nu=15_lambda=0.2error=_3.9754.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=100_Nu=15_lambda=0.2error=_3.9754.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 100, Nu = 15, $\lambda$ = 0.2}
+\label{DMC_EXP_N=100_Nu=15_lambda=0.2}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 4.0615}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=100_Nu=15_lambda=1error=_4.0615.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=100_Nu=15_lambda=1error=_4.0615.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 100, Nu = 15, $\lambda$ = 1}
+\label{DMC_EXP_N=100_Nu=15_lambda=1}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 5.7874}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=100_Nu=15_lambda=5error=_5.7874.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=100_Nu=15_lambda=5error=_5.7874.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 100, Nu = 15, $\lambda$ = 5}
+\label{DMC_EXP_N=100_Nu=15_lambda=5}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 3.9755}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=100_Nu=20_lambda=0.2error=_3.9755.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=100_Nu=20_lambda=0.2error=_3.9755.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 100, Nu = 20, $\lambda$ = 0.2}
+\label{DMC_EXP_N=100_Nu=20_lambda=0.2}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 4.0752}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=100_Nu=20_lambda=1error=_4.0752.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=100_Nu=20_lambda=1error=_4.0752.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 100, Nu = 20, $\lambda$ = 1}
+\label{DMC_EXP_N=100_Nu=20_lambda=1}
+\end{figure}
+\begin{figure}
+{\centering
+\textbf{Error = 5.7987}\par\medskip}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$Yzad, \ Y$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue, semithick, densely dashed]                file {Projekt1/PROJ1_4_YzadDMC.txt};
+\addplot[red,semithick] file {Projekt1/APROJ1_DMC_EXP_N=100_Nu=20_lambda=5error=_5.7987.txt};
+\legend{$Yzad$,$Y$}
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+width=0.5\textwidth,
+xmin = 0, xmax = 1200,
+xlabel={$k$},
+ylabel={$U$},
+y tick label style={/pgf/number format/1000 sep=},
+]
+\addplot[blue,semithick] file {Projekt1/APROJ1_DMC_EXP_STER_N=100_Nu=20_lambda=5error=_5.7987.txt};
+\legend{$U$}
+\end{axis}
+\end{tikzpicture}
+\caption{Przebieg oraz sterowanie dla parametrów N = 100, Nu = 20, $\lambda$ = 5}
+\label{DMC_EXP_N=100_Nu=20_lambda=5}
+\end{figure}
+
+
+
+Najlepszym regulatorem okazał się ten o parametrach N = 50, Nu = 5, $\lambda$ = 0.2.
+
+\FloatBarrier
+
+\section{Automatyczne strojenie regulatora DMC}
+
+
+Do automatycznego strojenia regulatora PID użyto już wczeniej używanej funkcji \verb+doDMC.m+, której użyto jako funkcji liczącej wartosć wskaźnik jakosci (funkcja ją zwraca) w maltabowskim algorytmie \verb+fmincon+, której użyto w skrypcie \verb+DMCOptimizer.m+. Przeprowadzono dwie próby: dla  dwóch różnych zestawów parametrów początkowych, co widać w listiingu \ref{LIST_1} poniżej, pamiętając o ograniczeniach na wielkosci parametrow (wielkosci horyzontów są zaokrąglane w funkcji  \verb+doDMC.m+). Wyniki predstawiono na rysunkach \ref{DMCOPT1} i \ref{DMCOPT2}.
+
+\begin{lstlisting}[style=custommatlab,frame=single,label={zad4_sim_lst},caption={Implementacja automatycznego strojenia DMC},captionpos=b]
+
+x01=[15,15,0.1];
+x02=[100,100,100];
+
+% N>=Nu
+A=[-1,1,0];
+b=[0];
+% N,Nu<=D=120
+lb=[1,1,0.01];
+ub=[120,120,100];
+[paras,error]=fmincon(@doDMC,x01,A,b,[],[],lb,ub);
+
+\label{LIST_2}
+\end{lstlisting}
+
+
+\begin{figure}[t]
+    
+    \textbf{E=\num{3.97}}
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+    width=0.98\textwidth,
+    xmin=0,xmax=1200,ymin=0.4, ymax=1.2,
+    xlabel={$k$},
+    ylabel={$y[k]$},
+    xtick={0, 300,600,900,1200},
+    ytick={0.4,0.6,0.8,1.0,1.2},
+    legend pos=south east,
+    y tick label style={/pgf/number format/1000 sep=},
+    ]
+    \addplot[blue, semithick] file{rysunki/PROJ1_DMC_OPTN=24.6529Nu=5.4996lambda=0.042893error=3.9695.txt};
+    \addplot[red, semithick] file{rysunki/PROJ1_4_YzadDMC.txt};
+    \addlegendentry{$y[k]$},
+    \addlegendentry{$y^{zad}[k]$},
+    \addlegendimage{no markers, blue}
+    \addlegendimage{no markers, red}
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Wyjscie dla N = 25, Nu = 5, $\lambda$ = \num{0.043}}
+    \label {PID_AUTO1}
+\end{figure}
+
+\begin{figure}[b]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+    width=0.98\textwidth,
+    xmin=0,xmax=1200,ymin=1.2, ymax=2.8,
+    xlabel={$k$},
+    ylabel={$u[k]$},
+    xtick={0, 300,600,900,1200},
+    ytick={1.2,1.6,2.0,2.4,2.8},
+    legend pos=south east,
+    y tick label style={/pgf/number format/1000 sep=},
+    ]
+    \addplot[const plot, blue, semithick] file{rysunki/PROJ1_DMC_OPT_STERN=24.6529Nu=5.4996lambda=0.042893error=3.9695.txt};
+    \legend{$u[k]$}
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Sterowanie dla N = 25, Nu = 5, $\lambda$ = \num{0.043}}
+    
+\end{figure}
+
+
+\begin{figure}[h]
+    
+    \textbf{E=\num{3.97}}
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+    width=0.98\textwidth,
+    xmin=0,xmax=1200,ymin=0.4, ymax=1.2,
+    xlabel={$k$},
+    ylabel={$y[k]$},
+    xtick={0, 300,600,900,1200},
+    ytick={0.4,0.6,0.8,1.0,1.2},
+    legend pos=south east,
+    y tick label style={/pgf/number format/1000 sep=},
+    ]
+    \addplot[blue, semithick] file{rysunki/PROJ1_DMC_OPTN=104.5613Nu=80.1535lambda=0.049946error=3.9695.txt};
+    \addplot[red, semithick] file{rysunki/PROJ1_4_YzadDMC.txt};
+    \addlegendentry{$y[k]$},
+    \addlegendentry{$y^{zad}[k]$},
+    \addlegendimage{no markers, blue}
+	\addlegendimage{no markers, red}
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Wyjscie dla N = 105, Nu = 80, $\lambda$ = \num{0.050}}
+    \label {PID_AUTO2}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+    width=0.98\textwidth,
+    xmin=0,xmax=1200,ymin=1.2, ymax=2.8,
+    xlabel={$k$},
+    ylabel={$u[k]$},
+    xtick={0, 300,600,900,1200},
+    ytick={1.2,1.6,2.0,2.4,2.8},
+    legend pos=south east,
+    y tick label style={/pgf/number format/1000 sep=},
+    ]
+    \addplot[const plot, blue, semithick] file{rysunki/PROJ1_DMC_OPT_STERN=104.5613Nu=80.1535lambda=0.049946error=3.9695.txt};
+    \legend{$u[k]$}
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Sterowanie dla N = 105, Nu = 80, $\lambda$ = \num{0.050} }
+    
+\end{figure}
+\FloatBarrier
+
+\section{Obserwacje i wnioski}
+
+Automatycznie dostrojony DMC okazał się lepszy (zgodnie z przewidywaniami), jednak interesujący jest fakt, iż otrzymano dwa tak samo dobre regulatory dla zupełnie różnych horyzontów sterowania i predykcji. Wynika z tego, że tak naprawdę jedyny parametr, która znacząco (oczywiscie poza bardzo krótkimi horyzontami predykcji) jest wartosć kary za sterowanie $\lambda$.
