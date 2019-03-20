@@ -1,0 +1,30 @@
+\chapter{Pomiar w punkcie pracy}
+\section{Komunikacja z obiektem}
+Komunikacja z obiektem odbywa siê za pomoc¹ funkcji napisanych w œrodowisku MatLab. Najprostszy program prezentuj¹cy sposób ich u¿ycia znajduje siê poni¿ej.
+%\begin{lstlisting}[style=custommatlab,frame=single]
+\begin{lstlisting}[style=Matlab-editor]
+%Hello World in Matlab
+addpath('F:\SerialCommunication'); % add a path to the functions
+initSerialControl COM3 % initialise com port
+N = 360;
+i = 0;
+while(i<=N)
+	%% obtaining measurements
+	measurements = readMeasurements(1:7); 
+	
+	%% processing of the measurements
+	disp(measurements(1));
+	
+	%% sending new values of control signals
+	sendControls([ 1, 2, 3, 4, 5, 6],
+	[50, 0, 0, 0, 29, 0]);  % new corresponding control values
+	
+	i=i+1;
+	% wait for new batch of measurements to be ready
+	waitForNewIteration();
+end
+\end{lstlisting} 
+Wartoœci podane do funkcji sendControls s¹ wartoœciami sterowania dla kolejno 4 wentylatorów i dwóch grza³ek.
+\section{Punkt pracy}
+Sygna³em steruj¹cym jest moc grzania pierwsz¹ grza³k¹ (5 element sterowalny obiektu), pierwszy wentylator (1 element sterowalny) ma byæ na sta³e ustawiony na 50\% (cecha otoczenia), a pozosta³e elementy maj¹ pozostaæ wy³¹czone. Wyjœciem ma byæ temperatura zmierzona przez czujnik temperatury T1.
+Wartoœci¹ sygna³u steruj¹cego w naszym punkcie pracy ma byæ 29\%. Wielkoœci tej, po ustabilizowaniu siê obiektu, odpowiada temperatura na T1 równa \num{34.68}.
