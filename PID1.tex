@@ -1,0 +1,360 @@
+\chapter{Regulator PID}
+\label{zad5}
+
+
+
+\section{Algorytm działania}
+Algorytm działania regulatora oraz implementacja została dobrze udokumentowana w pliku \verb+doPID.m +. Listing jego częsci algorytmicznej przedstawiony jest poniżej:
+\begin{lstlisting}[style=custommatlab,frame=single,label={zad4_sim_lst},caption={Implementacja regulatora PID},captionpos=b]
+
+function [ error ] = doPID( paras )   % Tylko dla auto
+
+% Ustawiamy dlugosc symulacji
+sim_len=1200;
+
+% Tylko dla auto
+K=paras(1);
+Ti=paras(2);
+Td=paras(3);
+
+% Czas probkowania
+T=1;
+
+% Parametry wygodnego, dyskretnego PIDa
+r0=K*(1+T/(2*Ti)+Td/T);
+r1=K*(T/(2*Ti)-(2*Td/T)-1);
+r2=K*Td/T;
+
+% Inicjalizujemy macierze przechowujace zmienne
+Y=zeros(sim_len,1);
+U=zeros(sim_len,1);
+e=zeros(sim_len,1);
+y=zeros(sim_len,1);
+u=zeros(sim_len,1);
+Yzad=zeros(sim_len,1);
+kk=linspace(1,sim_len,sim_len)';
+
+% Ustalamy wartosci przed rozpoczeciem symulacji na wartosci w punktu pracy
+Ypp=0.8;
+Upp=2.0;
+Y(1:11)=Ypp;
+U(1:11)=Upp;
+
+% Tworzymy horyzont wartosci zadanej
+Yzad(1:29)=0.8;
+Yzad(30:sim_len/3-1)=1.0;
+Yzad(sim_len/3:2*sim_len/3-1)=0.6;
+Yzad(2*sim_len/3:sim_len)=0.7;
+
+%Rzutujemy ograniczenia sterowan wzgledem punktu pracy.
+Umin=1.2;
+Umax=2.8;
+deltaumax=0.25;
+umin=Umin-Upp;
+umax=Umax-Upp;
+
+
+for k=12:sim_len
+    % Symulujemy wyjscie obiektu    
+    Y(k)=symulacja_obiektu4Y(U(k-10),U(k-11),Y(k-1),Y(k-2));
+    % Rzutujemy wartosc wyjscia wzgledem punktu pracy    
+    y(k)=Y(k)-Ypp;
+    % Liczymy uchyb i uaktualniamy wspolczynnik bledu
+    e(k)=Yzad(k)-Y(k);
+    error=error+e(k)^2;
+    % Liczymy wartosc sterowania    
+    u_wyliczone=r2*e(k-2)+r1*e(k-1)+r0*e(k)+u(k-1);
+
+    % Rzutowanie ograniczen na wartosc sterowania
+    if u_wyliczone<umin
+        u_wyliczone=umin;
+    elseif u_wyliczone>umax
+        u_wyliczone=umax;
+    end
+    % Rzutowanie ograniczen na wartosc zmiany sterowania
+    if u_wyliczone-u(k-1)<-deltaumax
+        u_wyliczone=u(k-1)-deltaumax;
+    elseif u_wyliczone-u(k-1)>deltaumax
+        u_wyliczone=u(k-1)+deltaumax;
+    end
+   % Rzutowanie sterowania wzgledem punktu pracy
+    u(k)=u_wyliczone;
+    U(k)=u_wyliczone+Upp;
+    
+ end
+
+
+\end{lstlisting}
+
+\section{Ręczne strojenie regulatora PID}
+
+\subsection{Wyliczenie wstępnych parametrów regulatora}
+
+W celu dobrania wstępnych parametrów regulatora PID użyto metody eksperymentalnej; przeprowadzono dużą ilosc symulacji dla arbitralnych wartosci $K_{\mathrm{r}}$,  $T_{\mathrm{i}}$, $T_{\mathrm{d}}$. Sposrod ponad 100 symulacji, wybrano te parametry, których wskaźnik jakoci był najlepszy. Stało się to dla regulatora przedstawionego na rysunku \ref{PID_0}.
+\begin{figure}[t]
+    
+    \textbf{E=\num{6.81}}
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+    width=0.98\textwidth,
+    xmin=0,xmax=1200,ymin=0.4, ymax=1.2,
+    xlabel={$k$},
+    ylabel={$y[k]$},
+    xtick={0, 300,600,900,1200},
+    ytick={0.4,0.6,0.8,1.0,1.2},
+    legend pos=south east,
+    y tick label style={/pgf/number format/1000 sep=},
+    ]
+    \addplot[blue, semithick] file{rysunki/PROJ1_PID_EXPerror=6.81K=1Ti=4Td=0.5.txt};
+    \addplot[red, semithick] file{rysunki/PROJ1_4_Yzad.txt};
+    \addlegendentry{$y[k]$},
+    \addlegendentry{$y^{zad}[k]$},
+    \addlegendimage{no markers, blue}
+	\addlegendimage{no markers, red}
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Wyjscie dla $K_{\mathrm{r}}$=\num{1},  $T_{\mathrm{i}}$=\num{4}, $T_{\mathrm{d}}$=\num{0.5}}
+    \label {PID_0}
+\end{figure}
+
+\begin{figure}[b]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+    width=0.98\textwidth,
+    xmin=0,xmax=1200,ymin=1.2, ymax=2.8,
+    xlabel={$k$},
+    ylabel={$u[k]$},
+    xtick={0, 300,600,900,1200},
+    ytick={1.2,1.6,2.0,2.4,2.8},
+    legend pos=south east,
+    y tick label style={/pgf/number format/1000 sep=},
+    ]
+    \addplot[const plot, blue, semithick] file{rysunki/PROJ1_PID_EXP_STERerror=6.81K=1Ti=4Td=0.5.txt};
+    \legend{$u[k]$}
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Sterowanie dla $K_{\mathrm{r}}$=\num{1},  $T_{\mathrm{i}}$=\num{4}, $T_{\mathrm{d}}$=\num{0.5} }
+    
+\end{figure}
+\FloatBarrier
+
+
+\subsection{Zmniejszenie przeregulowania}
+
+W celu zmniejszenia znacznego przeregulowania występującego w regulatorze zmniejszono jego wzmocnienie do  $K_{\mathrm{r}}$=\num{0.8} oraz dodatkowo zmieniono parametr członu różniczkującego do $T_{\mathrm{d}}$=\num{0.25}. Wyniki symulacji dla zmienionego regulatora przedstawone zostały na rysunku \ref{PID_1}.
+
+
+\begin{figure}[t]
+    
+    \textbf{E=\num{6.51}}
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+    width=0.98\textwidth,
+    xmin=0,xmax=1200,ymin=0.4, ymax=1.2,
+    xlabel={$k$},
+    ylabel={$y[k]$},
+    xtick={0, 300,600,900,1200},
+    ytick={0.4,0.6,0.8,1.0,1.2},
+    legend pos=south east,
+    y tick label style={/pgf/number format/1000 sep=},
+    ]
+    \addplot[blue, semithick] file{rysunki/PROJ1_PID_EXPerror=6.51K=0.8Ti=4Td=0.25.txt};
+    \addplot[red, semithick] file{rysunki/PROJ1_4_Yzad.txt};
+    \addlegendentry{$y[k]$},
+    \addlegendentry{$y^{zad}[k]$},
+    \addlegendimage{no markers, blue}
+	\addlegendimage{no markers, red}
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Wyjscie dla $K_{\mathrm{r}}$=\num{0.8},  $T_{\mathrm{i}}$=\num{4}, $T_{\mathrm{d}}$=\num{0.25}}
+    \label {PID_1}
+\end{figure}
+
+\begin{figure}[b]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+    width=0.98\textwidth,
+    xmin=0,xmax=1200,ymin=1.2, ymax=2.8,
+    xlabel={$k$},
+    ylabel={$u[k]$},
+    xtick={0, 300,600,900,1200},
+    ytick={1.2,1.6,2.0,2.4,2.8},
+    legend pos=south east,
+    y tick label style={/pgf/number format/1000 sep=},
+    ]
+    \addplot[const plot, blue, semithick] file{rysunki/PROJ1_PID_EXP_STERerror=6.51K=0.8Ti=4Td=0.25.txt};
+    \legend{$u[k]$}
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Sterowanie dla $K_{\mathrm{r}}$=\num{0.8},  $T_{\mathrm{i}}$=\num{4}, $T_{\mathrm{d}}$=\num{0.25} }
+    
+\end{figure}
+\FloatBarrier
+
+\subsection{Dalsze zmniejszenie przeregulowania}
+
+Przeregulowanie ciągle występuję w dosc znacznym stopniu, dlatego w następnym kroku zmneijeszono całkowanie do $T_{\mathrm{i}}$=\num{5} oraz dodatkowo zmniejszono różniczkowanie do 
+$T_{\mathrm{d}}$=\num{0.05}. Wyniki symulacji dla zmienionego regulatora przedstawione zostały na rysunku \ref{PID_2}.
+
+
+\begin{figure}[t]
+    
+    \textbf{E=\num{5.95}}
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+    width=0.98\textwidth,
+    xmin=0,xmax=1200,ymin=0.4, ymax=1.2,
+    xlabel={$k$},
+    ylabel={$y[k]$},
+    xtick={0, 300,600,900,1200},
+    ytick={0.4,0.6,0.8,1.0,1.2},
+    legend pos=south east,
+    y tick label style={/pgf/number format/1000 sep=},
+    ]
+    \addplot[blue, semithick] file{rysunki/PROJ1_PID_EXPerror=5.95K=0.8Ti=5Td=0.05.txt};
+    \addplot[red, semithick] file{rysunki/PROJ1_4_Yzad.txt};
+    \addlegendentry{$y[k]$},
+    \addlegendentry{$y^{zad}[k]$},
+    \addlegendimage{no markers, blue}
+	\addlegendimage{no markers, red}
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Wyjscie dla $K_{\mathrm{r}}$=\num{0.8},  $T_{\mathrm{i}}$=\num{5}, $T_{\mathrm{d}}$=\num{0.05}}
+    \label {PID_2}
+\end{figure}
+
+\begin{figure}[b]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+    width=0.98\textwidth,
+    xmin=0,xmax=1200,ymin=1.2, ymax=2.8,
+    xlabel={$k$},
+    ylabel={$u[k]$},
+    xtick={0, 300,600,900,1200},
+    ytick={1.2,1.6,2.0,2.4,2.8},
+    legend pos=south east,
+    y tick label style={/pgf/number format/1000 sep=},
+    ]
+    \addplot[const plot, blue, semithick] file{rysunki/PROJ1_PID_EXP_STERerror=5.95K=0.8Ti=5Td=0.05.txt};
+    \legend{$u[k]$}
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Sterowanie dla $K_{\mathrm{r}}$=\num{0.8},  $T_{\mathrm{i}}$=\num{5}, $T_{\mathrm{d}}$=\num{0.95} }
+    
+\end{figure}
+\FloatBarrier
+
+
+\subsection{Przyspieszenie regulatora}
+
+W celu zwiększenia szybkosci regulatora zwiększono jego wzmocnienie do  $K_{\mathrm{r}}$=\num{2.4} oraz w ramach kompensacji zmniejszono całkowanie do $T_{\mathrm{i}}$=\num{8}. Wyniki symulacji dla zmienionego regulatora przedstawione zostały na rysunku \ref{PID_3}.
+
+
+\begin{figure}[t]
+    
+    \textbf{E=\num{5.14}}
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+    width=0.98\textwidth,
+    xmin=0,xmax=1200,ymin=0.4, ymax=1.2,
+    xlabel={$k$},
+    ylabel={$y[k]$},
+    xtick={0, 300,600,900,1200},
+    ytick={0.4,0.6,0.8,1.0,1.2},
+    legend pos=south east,
+    y tick label style={/pgf/number format/1000 sep=},
+    ]
+    \addplot[blue, semithick] file{rysunki/PROJ1_PID_EXPerror=5.14K=2.4Ti=8Td=0.05.txt};
+    \addplot[red, semithick] file{rysunki/PROJ1_4_Yzad.txt};
+    \addlegendentry{$y[k]$},
+    \addlegendentry{$y^{zad}[k]$},
+    \addlegendimage{no markers, blue}
+	\addlegendimage{no markers, red}
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Wyjscie dla $K_{\mathrm{r}}$=\num{0.8},  $T_{\mathrm{i}}$=\num{5}, $T_{\mathrm{d}}$=\num{0.05}}
+    \label {PID_3}
+\end{figure}
+
+\begin{figure}[b]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+    width=0.98\textwidth,
+    xmin=0,xmax=1200,ymin=1.2, ymax=2.8,
+    xlabel={$k$},
+    ylabel={$u[k]$},
+    xtick={0, 300,600,900,1200},
+    ytick={1.2,1.6,2.0,2.4,2.8},
+    legend pos=south east,
+    y tick label style={/pgf/number format/1000 sep=},
+    ]
+    \addplot[const plot, blue, semithick] file{rysunki/PROJ1_PID_EXP_STERerror=5.14K=2.4Ti=8Td=0.05.txt};
+    \legend{$u[k]$}
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Sterowanie dla $K_{\mathrm{r}}$=\num{0.8},  $T_{\mathrm{i}}$=\num{5}, $T_{\mathrm{d}}$=\num{0.05} }
+    
+\end{figure}
+\FloatBarrier
+
+\subsection{Człon różniczkujący}
+
+Podczas wczesniejszego strojenia zauważono fakt, iż zmniejszenie członu różniczkującego pozytywnie wpływa na jakosć regulacji. Postanowiono więc znacznie go zmniejszyć, do wartosci $T_{\mathrm{d}}$=\num{0.0005}. Wyniki symulacji dla zmienionego regulatora przedstawione zostały na rysunku \ref{PID_4}.
+
+
+\begin{figure}[t]
+    
+    \textbf{E=\num{4.94}}
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+    width=0.98\textwidth,
+    xmin=0,xmax=1200,ymin=0.4, ymax=1.2,
+    xlabel={$k$},
+    ylabel={$y[k]$},
+    xtick={0, 300,600,900,1200},
+    ytick={0.4,0.6,0.8,1.0,1.2},
+    legend pos=south east,
+    y tick label style={/pgf/number format/1000 sep=},
+    ]
+    \addplot[blue, semithick] file{rysunki/PROJ1_PID_EXPerror=4.94K=2.4Ti=8Td=5e-05.txt};
+    \addplot[red, semithick] file{rysunki/PROJ1_4_Yzad.txt};
+    \addlegendentry{$y[k]$},
+    \addlegendentry{$y^{zad}[k]$},
+    \addlegendimage{no markers, blue}
+	\addlegendimage{no markers, red}
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Wyjscie dla $K_{\mathrm{r}}$=\num{0.8},  $T_{\mathrm{i}}$=\num{5}, $T_{\mathrm{d}}$=\num{0.05}}
+    \label {PID_4}
+\end{figure}
+
+\begin{figure}[b]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+    width=0.98\textwidth,
+    xmin=0,xmax=1200,ymin=1.2, ymax=2.8,
+    xlabel={$k$},
+    ylabel={$u[k]$},
+    xtick={0, 300,600,900,1200},
+    ytick={1.2,1.6,2.0,2.4,2.8},
+    legend pos=south east,
+    y tick label style={/pgf/number format/1000 sep=},
+    ]
+    \addplot[const plot, blue, semithick] file{rysunki/PROJ1_PID_EXP_STERerror=4.94K=2.4Ti=8Td=5e-05.txt};
+    \legend{$u[k]$}
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Sterowanie dla $K_{\mathrm{r}}$=\num{0.8},  $T_{\mathrm{i}}$=\num{5}, $T_{\mathrm{d}}$=\num{0.05} }
+    
+\end{figure}
+\FloatBarrier
