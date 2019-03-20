@@ -1,0 +1,163 @@
+\chapter{Regulatory}
+\section{PID}
+\begin{lstlisting}[style=Matlab-editor]
+addpath('F:\SerialCommunication'); % add a path to the functions
+initSerialControl COM3 % initialise com port
+
+K=38;
+Ti=1/12;
+Td=3;
+T=1; % Czas probkowania
+error=0;
+sim_len=600;
+
+% Parametry dyskretnego PIDa
+r0=K*(1+T/(2*Ti)+Td/T);
+r1=K*(T/(2*Ti)-2*Td/T-1);
+r2=K*Td/T;
+
+Y=zeros(sim_len,1);
+U=zeros(sim_len,1);
+e=zeros(sim_len,1);
+y=zeros(sim_len,1);
+u=zeros(sim_len,1);
+Yzad=zeros(sim_len,1);
+
+Ypp=34.5;
+Upp=29;
+
+Y(1:30)=Ypp;
+U(1:30)=Upp;
+kk=linspace(1,sim_len,sim_len)';
+
+
+Yzad(1:sim_len/3-1)=37.0;
+Yzad(sim_len/3:2*sim_len/3-1)=33.0;
+Yzad(2*sim_len/3:sim_len)=34.5;
+
+
+% Ograniczenia U
+Umin=0;
+Umax=100;
+umin=Umin-Upp;
+umax=Umax-Upp;
+
+for i=31:sim_len
+measurements = readMeasurements(1:7); % read measurements
+
+Y(k)=measurements(1)
+y(k)=Y(k)-Ypp;
+e(k)=Yzad(k)-Y(k);
+error=error+e(k)^2;
+
+u_wyliczone=r2*e(k-2)+r1*e(k-1)+r0*e(k)+u(k-1);
+% Rzutowanie ograniczen na wartosc sterowania
+if u_wyliczone<umin
+u_wyliczone=umin;
+elseif u_wyliczone>umax
+u_wyliczone=umax;
+end
+u(k)=u_wyliczone;
+U(k)=u_wyliczone+Upp;
+sendControls([ 1, 2, 3, 4, 5, 6], ... send for these elements
+[50, 0, 0, 0, U(k), 0]);  % new corresponding control values
+end
+\end{lstlisting} 
+\section{DMC}
+\begin{lstlisting}[style=Matlab-editor]
+load normal_step_response.mat;
+% Ucinamy moment 0 zeby latwiej bylo operowac
+stepResp=stepResp(2:end);
+
+D=length(step_response);
+N=80;
+Nu=60;
+lambda=1;
+
+addpath('F:\SerialCommunication'); % add a path to the functions
+initSerialControl COM3 % initialise com port
+
+error=0;
+
+M=zeros(N,Nu);
+for j=1:Nu
+	for i=j:N
+		M(i,j)=stepResp(i-j+1);
+	end
+end
+
+Mp=zeros(N,D-1);
+for i=1:N
+	for j=1:D-1
+		if (i+j)<=D
+			Mp(i,j)=stepResp(i+j)-stepResp(j);
+		else
+			Mp(i,j)=stepResp(end)-stepResp(j);
+		end
+	end
+end
+
+
+K=(M'*M+lambda*lambda*eye(Nu))^(-1)*M';
+Ke=sum(K(1,:));
+Ku=K(1,:)*Mp;
+
+dUp=zeros(D-1,1);
+
+% Koniec czesci przedregulacyjnej
+
+sim_len=1800;
+
+Y=zeros(sim_len,1);
+U=zeros(sim_len,1);
+du=zeros(sim_len,1);
+e=zeros(sim_len,1);
+y=zeros(sim_len,1);
+u=zeros(sim_len,1);
+Yzad=zeros(sim_len,1);
+
+
+Yzad(1:sim_len/3-1)=37.0;
+Yzad(sim_len/3:2*sim_len/3-1)=33.0;
+Yzad(2*sim_len/3:sim_len)=34.5;
+
+
+Ypp=34.5;
+Upp=29.0;
+
+Y(1:D+20)=0.8;
+U(1:D+20)=2.0;
+
+kk=linspace(1,sim_len,sim_len)';
+
+Umin=1.2;
+Umax=2.8;
+umin=Umin-Upp;
+umax=Umax-Upp;
+
+% Koniec deklaracji innych waznych rzeczy
+
+for k=D+21:sim_len
+	measurements = readMeasurements(1:7); % read measurements
+	Y(k)=measurements(1)
+	y(k)=Y(k)-Ypp;
+	e(k)=Yzad(k)-Y(k);
+	error=error+e(k)^2;
+	
+	dUp=du(k-D+1:k-1);
+	du_wyliczone=Ke*e(k)-Ku*dUp;
+	
+	% Rzutowanie ograniczen na wartosc zmiany sterowania
+	if du_wyliczone+u(k-1)<umin
+		du_wyliczone=umin-u(k-1);
+	elseif du_wyliczone+u(k-1)>umax
+		du_wyliczone=umax-u(k-1);
+	end
+	
+	du(k)=du_wyliczone;
+	u(k)=u(k-1)+du(k);
+	U(k)=u(k)+Upp;
+	sendControls([ 1, 2, 3, 4, 5, 6], ... send for these elements
+	[50, 0, 0, 0, U(k), 0]);  % new corresponding control values
+end
+\end{lstlisting} 
