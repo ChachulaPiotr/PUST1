@@ -1,0 +1,38 @@
+\chapter{Przekształcenie odpowiedzi skokowej}
+\label{zad3}
+
+\label{zad3_postac_ogolna}
+Aby uzyskać znormalizowaną odpowiedź skokową, należy przerzutować ją względem punktu pracy oraz wielkosci skoku, a także przesuąć chwilę skoku sterowania do chwili k=\num{0} (z chwili $k_{skok}$).Do tego celu można użyć wzoru: 
+
+\begin{equation}
+    s_{i} = \frac{s_{i+k_{skok}} - Y_{\mathrm{pp}}}{\Delta U}
+    \label{zad3_norm_odp_skok_wzor}
+\end{equation}
+
+Wyznaczono ją przy użyciu skrpytu \verb+PROJ1_3.m+ (dla odpowiedzi skokwej przy $\Delta u = \num{0,5}$). Następnie przycięto ją do miejsca w którym osiąga $\num{0.995}$ swojej maksymalnej wartosci. Długosc tej odpowiedzi jest przyjętym horyzontem dynamiki tego obiektu i jest równy 120. Wynik działania przedstawiony jest na rysunku \ref{zad3_norm_odp_wykres}.
+Odpowiedź ta zostanie użyta do zaprojektowania regulatora DMC.
+
+\begin{figure}[b]
+    \label{zad3_norm_odp_wykres}
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+    width=\textwidth,
+    xmin=0,xmax=120,ymin=0,ymax=0.8,
+    xlabel={$k$},
+    ylabel={$s_{k}$},
+    xtick={0, 40, 80, 120},
+    ytick={0, 0.2,0.4,0.6,0.8},
+    legend pos=south east,
+    y tick label style={/pgf/number format/1000 sep=},
+    ]
+    \addplot[red, semithick] file{rysunki/PROJ1_3.txt};
+    \legend{$y[k]$}
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Postać przeksztalconej odpowiedzi skokowej symulowanego obiektu ze zmianą sterowania w momencie k=0}
+\end{figure}
+
+
+
+
