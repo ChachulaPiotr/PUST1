@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.11.28)  20 MAR 2019 12:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2019.3.20)  20 MAR 2019 15:51
 entering extended mode
 **./PUST1.tex
 (PUST1.tex
@@ -23,7 +23,73 @@ File: mw10.clo 2017/05/13 v0.75 A document class size option (MW)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen103
-) (C:\MiKTeX\tex\latex\polski\polski.sty
+)
+(C:\MiKTeX\tex\latex\graphics\graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\MiKTeX\tex\latex\graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(C:\MiKTeX\tex\latex\graphics\graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\MiKTeX\tex\latex\graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(C:\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(C:\MiKTeX\tex\latex\graphics-def\pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+)
+(C:\MiKTeX\tex\latex\oberdiek\grffile.sty
+Package: grffile 2017/06/30 v1.18 Extended file name support for graphics (HO)
+
+(C:\MiKTeX\tex\generic\oberdiek\ifpdf.sty
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+(C:\MiKTeX\tex\generic\ifxetex\ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(C:\MiKTeX\tex\latex\oberdiek\kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(C:\MiKTeX\tex\generic\oberdiek\ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+(C:\MiKTeX\tex\generic\oberdiek\kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(C:\MiKTeX\tex\generic\oberdiek\infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(C:\MiKTeX\tex\generic\oberdiek\etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(C:\MiKTeX\tex\generic\oberdiek\ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+))))
+(C:\MiKTeX\tex\generic\oberdiek\pdftexcmds.sty
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package grffile Info: Option `multidot' is set to `true'.
+Package grffile Info: Option `extendedchars' is set to `false'.
+Package grffile Info: Option `space' is set to `true'.
+Package grffile Info: \Gin@ii of package `graphicx' fixed on input line 494.
+)
+(C:\MiKTeX\tex\latex\polski\polski.sty
 Package: polski 2017/05/04 v1.3.4 Polish language package
 
    Switching to Polish text encoding and Polish maths fonts.
@@ -71,8 +137,8 @@ LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 )
 (C:\MiKTeX\tex\latex\base\inputenc.sty
 Package: inputenc 2018/04/06 v1.3b Input encoding file
-\inpenc@prehook=\toks14
-\inpenc@posthook=\toks15
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
 ) (C:\MiKTeX\tex\latex\base\fontenc.sty
 Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
 
@@ -125,30 +191,6 @@ Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 (C:\MiKTeX\tex\generic\pgfplots\pgfplots.revision.tex)
 Package: pgfplots 2018/03/28 v1.16 Data Visualization (1.16)
 
-(C:\MiKTeX\tex\latex\graphics\graphicx.sty
-Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
-
-(C:\MiKTeX\tex\latex\graphics\keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks16
-)
-(C:\MiKTeX\tex\latex\graphics\graphics.sty
-Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
-
-(C:\MiKTeX\tex\latex\graphics\trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(C:\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
-)
-Package graphics Info: Driver file: pdftex.def on input line 99.
-
-(C:\MiKTeX\tex\latex\graphics-def\pdftex.def
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
-))
-\Gin@req@height=\dimen104
-\Gin@req@width=\dimen105
-)
 (C:\MiKTeX\tex\latex\pgf\frontendlayer\tikz.sty
 (C:\MiKTeX\tex\latex\pgf\basiclayer\pgf.sty
 (C:\MiKTeX\tex\latex\pgf\utilities\pgfrcs.sty
@@ -764,31 +806,6 @@ Package: scrbase 2019/02/01 v3.26b KOMA-Script package (KOMA-Script-independent
 (C:\MiKTeX\tex\latex\koma-script\scrlfile.sty
 Package: scrlfile 2019/02/01 v3.26b KOMA-Script package (loading files)
 ))
-(C:\MiKTeX\tex\generic\oberdiek\ifpdf.sty
-Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
-)
-(C:\MiKTeX\tex\generic\oberdiek\ifluatex.sty
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-(C:\MiKTeX\tex\generic\ifxetex\ifxetex.sty
-Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-)
-(C:\MiKTeX\tex\generic\oberdiek\pdftexcmds.sty
-Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(C:\MiKTeX\tex\generic\oberdiek\infwarerr.sty
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-(C:\MiKTeX\tex\generic\oberdiek\ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
 (C:\MiKTeX\tex\latex\tools\shellesc.sty
 Package: shellesc 2016/06/07 v0.02a unified shell escape interface for LaTeX
 Package shellesc Info: Restricted shell escape enabled on input line 69.
@@ -824,8 +841,8 @@ Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
 Package hobsub Info: Skipping package `ifpdf' (already loaded).
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package hobsub Info: Skipping package `etexcmds' (already loaded).
+Package hobsub Info: Skipping package `kvsetkeys' (already loaded).
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 Package hobsub Info: Skipping package `pdftexcmds' (already loaded).
 Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
@@ -843,9 +860,6 @@ Package atveryend Info: \enddocument detected (standard20110627).
 Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
-)
-(C:\MiKTeX\tex\latex\oberdiek\kvoptions.sty
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen274
 \Hy@linkcounter=\count302
@@ -985,23 +999,23 @@ Package: geometry 2018/04/16 v5.8 Page Geometry
 (C:\MiKTeX\tex\latex\geometry\geometry.cfg)) (PUST1.aux)
 \openout1 = `PUST1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 91.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 93.
 
 (C:\MiKTeX\tex\latex\lm\t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1036,7 +1050,7 @@ ABD: EveryShipout initializing macros
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into 
 your preamble.
- on input line 91.
+ on input line 93.
 
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
@@ -1119,20 +1133,20 @@ Dictionary: translator-basic-dictionary, Language: English
 (C:\MiKTeX\tex\latex\siunitx\siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
-LaTeX Info: Redefining \celsius on input line 91.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 91.
+LaTeX Info: Redefining \celsius on input line 93.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 93.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 91.
-Package gensymb Info: Using \Omega for \ohm on input line 91.
+LaTeX Info: Redefining \ohm on input line 93.
+Package gensymb Info: Using \Omega for \ohm on input line 93.
 
 Package gensymb Warning: Not defining \micro.
 
 \AtBeginShipoutBox=\box74
-Package hyperref Info: Link coloring OFF on input line 91.
+Package hyperref Info: Link coloring OFF on input line 93.
 (C:\MiKTeX\tex\latex\hyperref\nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -1141,9 +1155,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count333
 )
-LaTeX Info: Redefining \ref on input line 91.
-LaTeX Info: Redefining \pageref on input line 91.
-LaTeX Info: Redefining \nameref on input line 91.
+LaTeX Info: Redefining \ref on input line 93.
+LaTeX Info: Redefining \pageref on input line 93.
+LaTeX Info: Redefining \nameref on input line 93.
  (PUST1.out) (PUST1.out)
 \@outlinefile=\write4
 \openout4 = `PUST1.out'.
@@ -1187,39 +1201,39 @@ LaTeX Info: Redefining \nameref on input line 91.
 (C:\MiKTeX\tex\latex\siunitx\siunitx-binary.cfg
 File: siunitx-binary.cfg 2017/11/26 v2.7k siunitx: Binary units
 )
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 91.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 93.
 
 (C:\MiKTeX\tex\latex\lm\ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 91.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 93.
  (C:\MiKTeX\tex\latex\lm\omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 91.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 93.
 
 
 (C:\MiKTeX\tex\latex\lm\omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 91.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 93.
 
  (C:\MiKTeX\tex\latex\lm\omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 91.
+(Font)              <10> on input line 93.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 91.
+(Font)              <7> on input line 93.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 91.
-LaTeX Font Info:    Try loading font information for OT1+lmss on input line 91.
+(Font)              <5> on input line 93.
+LaTeX Font Info:    Try loading font information for OT1+lmss on input line 93.
 
 
 (C:\MiKTeX\tex\latex\lm\ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 91.
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 93.
 
  (C:\MiKTeX\tex\latex\lm\ot1lmtt.fd
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1227,7 +1241,12 @@ File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 [1
 
 {C:/Users/pchac/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(PUST1.toc)
+(PUST1.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 2.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 2.
+)
 \tf@toc=\write5
 \openout5 = `PUST1.toc'.
 
@@ -1235,32 +1254,535 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.132 \end{document}
+l.133 \part{Projekt}
                      [1
 
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 132.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 132.
+] [2
+
+] (ZAD1.tex
+Rozdzia\PlPrIeC {\l } 1.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 8.
+(C:\MiKTeX\tex\latex\lm\t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+PGFPlots: reading {rysunki/PROJ1_1.txt}
+
+Overfull \hbox (7.14256pt too wide) in paragraph at lines 31--32
+ [][] 
+ []
+
+) (DMC4.tex
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=25_Nu=5_lambda=0.2error=_3.9763.tx
+t}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=25_Nu=5_lambda=0.2error=_3.97
+63.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 17--30
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=25_Nu=5_lambda=1error=_4.0583.txt}
+
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=25_Nu=5_lambda=1error=_4.0583
+.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 48--61
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=25_Nu=5_lambda=5error=_7.592.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=25_Nu=5_lambda=5error=_7.592.
+txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 79--92
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=25_Nu=10_lambda=0.2error=_3.9754.t
+xt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=25_Nu=10_lambda=0.2error=_3.9
+754.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 110--123
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=25_Nu=10_lambda=1error=_4.0671.txt
+}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=25_Nu=10_lambda=1error=_4.067
+1.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 141--154
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=25_Nu=10_lambda=5error=_7.6117.txt
+}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=25_Nu=10_lambda=5error=_7.611
+7.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 172--185
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=25_Nu=15_lambda=0.2error=_3.9755.t
+xt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=25_Nu=15_lambda=0.2error=_3.9
+755.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 203--216
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=25_Nu=15_lambda=1error=_4.0673.txt
+}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=25_Nu=15_lambda=1error=_4.067
+3.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 234--247
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=25_Nu=15_lambda=5error=_7.6125.txt
+}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=25_Nu=15_lambda=5error=_7.612
+5.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 265--278
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=25_Nu=20_lambda=0.2error=_3.9755.t
+xt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=25_Nu=20_lambda=0.2error=_3.9
+755.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 296--309
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=25_Nu=20_lambda=1error=_4.0673.txt
+}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=25_Nu=20_lambda=1error=_4.067
+3.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 327--340
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=25_Nu=20_lambda=5error=_7.6125.txt
+}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=25_Nu=20_lambda=5error=_7.612
+5.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 358--371
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=50_Nu=5_lambda=0.2error=_3.9743.tx
+t}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=50_Nu=5_lambda=0.2error=_3.97
+43.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 389--402
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=50_Nu=5_lambda=1error=_4.1697.txt}
+
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=50_Nu=5_lambda=1error=_4.1697
+.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 420--433
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=50_Nu=5_lambda=5error=_5.3484.txt}
+
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=50_Nu=5_lambda=5error=_5.3484
+.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 451--464
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=50_Nu=10_lambda=0.2error=_3.9759.t
+xt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=50_Nu=10_lambda=0.2error=_3.9
+759.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 482--495
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=50_Nu=10_lambda=1error=_4.0867.txt
+}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=50_Nu=10_lambda=1error=_4.086
+7.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 513--526
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=50_Nu=10_lambda=5error=_5.5964.txt
+}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=50_Nu=10_lambda=5error=_5.596
+4.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 544--557
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=50_Nu=15_lambda=0.2error=_3.9755.t
+xt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=50_Nu=15_lambda=0.2error=_3.9
+755.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 575--588
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=50_Nu=15_lambda=1error=_4.0746.txt
+}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=50_Nu=15_lambda=1error=_4.074
+6.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 606--619
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=50_Nu=15_lambda=5error=_5.6975.txt
+}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=50_Nu=15_lambda=5error=_5.697
+5.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 637--650
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=50_Nu=20_lambda=0.2error=_3.9755.t
+xt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=50_Nu=20_lambda=0.2error=_3.9
+755.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 668--681
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=50_Nu=20_lambda=1error=_4.0777.txt
+}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=50_Nu=20_lambda=1error=_4.077
+7.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 699--712
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=50_Nu=20_lambda=5error=_5.7314.txt
+}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=50_Nu=20_lambda=5error=_5.731
+4.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 730--743
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=75_Nu=5_lambda=0.2error=_3.9745.tx
+t}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=75_Nu=5_lambda=0.2error=_3.97
+45.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 761--774
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=75_Nu=5_lambda=1error=_4.186.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=75_Nu=5_lambda=1error=_4.186.
+txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 792--805
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=75_Nu=5_lambda=5error=_5.2971.txt}
+
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=75_Nu=5_lambda=5error=_5.2971
+.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 823--836
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=75_Nu=10_lambda=0.2error=_3.9761.t
+xt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=75_Nu=10_lambda=0.2error=_3.9
+761.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 854--867
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=75_Nu=10_lambda=1error=_4.067.txt}
+
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=75_Nu=10_lambda=1error=_4.067
+.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 885--898
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=75_Nu=10_lambda=5error=_5.6232.txt
+}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=75_Nu=10_lambda=5error=_5.623
+2.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 916--929
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=75_Nu=15_lambda=0.2error=_3.9755.t
+xt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=75_Nu=15_lambda=0.2error=_3.9
+755.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 947--960
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=75_Nu=15_lambda=1error=_4.0645.txt
+}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=75_Nu=15_lambda=1error=_4.064
+5.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 978--991
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=75_Nu=15_lambda=5error=_5.7466.txt
+}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=75_Nu=15_lambda=5error=_5.746
+6.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 1009--1022
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=75_Nu=20_lambda=0.2error=_3.9755.t
+xt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=75_Nu=20_lambda=0.2error=_3.9
+755.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 1040--1053
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=75_Nu=20_lambda=1error=_4.0753.txt
+}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=75_Nu=20_lambda=1error=_4.075
+3.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 1071--1084
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=75_Nu=20_lambda=5error=_5.7773.txt
+}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=75_Nu=20_lambda=5error=_5.777
+3.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 1102--1115
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=100_Nu=5_lambda=0.2error=_3.9747.t
+xt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=100_Nu=5_lambda=0.2error=_3.9
+747.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 1133--1146
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=100_Nu=5_lambda=1error=_4.1822.txt
+}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=100_Nu=5_lambda=1error=_4.182
+2.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 1164--1177
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=100_Nu=5_lambda=5error=_5.3371.txt
+}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=100_Nu=5_lambda=5error=_5.337
+1.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 1195--1208
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=100_Nu=10_lambda=0.2error=_3.9762.
+txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=100_Nu=10_lambda=0.2error=_3.
+9762.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 1226--1239
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=100_Nu=10_lambda=1error=_4.0589.tx
+t}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=100_Nu=10_lambda=1error=_4.05
+89.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 1257--1270
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=100_Nu=10_lambda=5error=_5.6774.tx
+t}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=100_Nu=10_lambda=5error=_5.67
+74.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 1288--1301
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=100_Nu=15_lambda=0.2error=_3.9754.
+txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=100_Nu=15_lambda=0.2error=_3.
+9754.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 1319--1332
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=100_Nu=15_lambda=1error=_4.0615.tx
+t}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=100_Nu=15_lambda=1error=_4.06
+15.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 1350--1363
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=100_Nu=15_lambda=5error=_5.7874.tx
+t}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=100_Nu=15_lambda=5error=_5.78
+74.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 1381--1394
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=100_Nu=20_lambda=0.2error=_3.9755.
+txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=100_Nu=20_lambda=0.2error=_3.
+9755.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 1412--1425
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=100_Nu=20_lambda=1error=_4.0752.tx
+t}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=100_Nu=20_lambda=1error=_4.07
+52.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 1443--1456
+[][] [] 
+ []
+
+PGFPlots: reading {Projekt1/PROJ1_4_YzadDMC.txt}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_N=100_Nu=20_lambda=5error=_5.7987.tx
+t}
+PGFPlots: reading {Projekt1/APROJ1_DMC_EXP_STER_N=100_Nu=20_lambda=5error=_5.79
+87.txt}
+
+Overfull \hbox (18.56947pt too wide) in paragraph at lines 1474--1487
+[][] [] 
+ []
+
+) [3
+
+] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18]
+[19]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 138.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 138.
  (PUST1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 132.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 132.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 138.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 138.
 Package rerunfilecheck Info: File `PUST1.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 132.
+(rerunfilecheck)             Checksum: 9D3AA76810FB44319A943B0D76FED6B1;209.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 138.
  ) 
 Here is how much of TeX's memory you used:
- 41844 strings out of 492969
- 956684 string characters out of 3143814
- 1095977 words of memory out of 3000000
- 45168 multiletter control sequences out of 15000+200000
- 575302 words of font info for 51 fonts, out of 3000000 for 9000
+ 43854 strings out of 492969
+ 1002972 string characters out of 3143815
+ 6006017 words of memory out of 100000000
+ 46975 multiletter control sequences out of 15000+200000
+ 605109 words of font info for 67 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,5n,96p,724b,759s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<C:/MiKTeX/fonts/type1/public/lm/lmbx
-12.pfb>
-Output written on PUST1.pdf (2 pages, 31389 bytes).
+ 62i,21n,100p,724b,2149s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/MiKTeX/fonts/enc/dvips/lm/lm-rm.e
+nc}{C:/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}<C:/MiKTeX/fonts/type1/public/lm
+/lmbx10.pfb><C:/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/MiKTeX/fonts/type1/
+public/lm/lmbx9.pfb><C:/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/MiKTeX/font
+s/type1/public/lm/lmmi7.pfb><C:/MiKTeX/fonts/type1/public/lm/lmmi9.pfb><C:/MiKT
+eX/fonts/type1/public/lm/lmr10.pfb><C:/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C
+:/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/MiKTeX/fonts/type1/public/lm/lmr9.p
+fb><C:/MiKTeX/fonts/type1/public/lm/lmri9.pfb><C:/MiKTeX/fonts/type1/public/lm/
+lmtt10.pfb>
+Output written on PUST1.pdf (20 pages, 1069116 bytes).
 PDF statistics:
- 23 PDF objects out of 1000 (max. 8388607)
- 3 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 235 PDF objects out of 1000 (max. 8388607)
+ 74 named destinations out of 1000 (max. 500000)
+ 45 words of extra memory for PDF output out of 10000 (max. 10000000)
 
