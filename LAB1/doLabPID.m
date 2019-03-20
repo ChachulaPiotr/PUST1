@@ -1,17 +1,17 @@
-clear all;
+
 %UNTITLED2 Summary of this function goes here
 %   Detailed explanation goes here
 
     addpath('F:\SerialCommunication'); % add a path to the functions
     initSerialControl COM3 % initialise com port
 % 
-K=9.65;
-Ti=60;
-Td=0.17;
+K=38;
+Ti=1/12;
+Td=3;
 % Czas probkowania
 T=1;
 error=0;
-sim_len=900;
+sim_len=600;
 
 % Parametry wygodnego, dyskretnego PIDa
 r0=K*(1+T/(2*Ti)+Td/T);
@@ -25,7 +25,7 @@ y=zeros(sim_len,1);
 u=zeros(sim_len,1);
 Yzad=zeros(sim_len,1);
 
-Ypp=readMeasurements(1);
+Ypp=34.5;
 Upp=29;
 
 Y(1:30)=Ypp;
@@ -41,15 +41,14 @@ Yzad(2*sim_len/3:sim_len)=34.5;
 % U w przedziale 1.2:2.8; u w przedziale -0.8:0.8
 Umin=0;
 Umax=100;
-deltaumax=100;
+deltaumax=0.25;
 umin=Umin-Upp;
 umax=Umax-Upp;
 
-for k=31:sim_len
+for i=31:sim_len
  measurements = readMeasurements(1:7); % read measurements from 1 to 1
  
-    Y(k)=measurements(1);
-    
+    Y(k)=measurements(1)
     y(k)=Y(k)-Ypp;
     e(k)=Yzad(k)-Y(k);
     error=error+e(k)^2;
@@ -72,8 +71,7 @@ for k=31:sim_len
     U(k)=u_wyliczone+Upp;
     sendControls([ 1, 2, 3, 4, 5, 6], ... send for these elements
     [50, 0, 0, 0, U(k), 0]);  % new corresponding control valuesdisp(measurements); % process measurements
-    disp([Y(k),U(k)]);
-    waitForNewIteration();
+    
 end
 
 plot(Y);
@@ -97,6 +95,3 @@ T=table(kk,U);
 name="LAB1_PID_EXP_STER K="+string(K)+" Ti="+string(Ti)+" Td="+string(Td)+"error= "+string(error)+".txt";
 writetable(T,char(name),'WriteVariableNames',false,'Delimiter','space');
 
-
-    sendControls([ 1, 2, 3, 4, 5, 6], ... send for these elements
-    [50, 0, 0, 0, 29, 0]);  % new corresponding control valuesdisp(measurements); % process measurements
