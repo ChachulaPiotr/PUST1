@@ -89,8 +89,8 @@ for k=12:sim_len
 \section{Ręczne strojenie regulatora PID}
 
 \subsection{Wyliczenie wstępnych parametrów regulatora}
-
-W celu dobrania wstępnych parametrów regulatora PID użyto metody eksperymentalnej; przeprowadzono dużą ilosc symulacji dla arbitralnych wartosci $K_{\mathrm{r}}$,  $T_{\mathrm{i}}$, $T_{\mathrm{d}}$. Sposrod ponad 100 symulacji, wybrano te parametry, których wskaźnik jakoci był najlepszy. Stało się to dla regulatora przedstawionego na rysunku \ref{PID_0}.
+\label{PID_START}
+Celem naszej regulacji jest minimalizacja wskaźnika jakosci, będącym sumą kwadratów uchybu regulacji w każdym punkcie. W celu dobrania wstępnych parametrów regulatora PID użyto metody eksperymentalnej; przeprowadzono dużą ilosc symulacji dla arbitralnych wartosci $K_{\mathrm{r}}$,  $T_{\mathrm{i}}$, $T_{\mathrm{d}}$. Sposrod ponad 100 symulacji, wybrano te parametry, których wskaźnik jakoci był najlepszy. Stało się to dla regulatora przedstawionego na rysunku \ref{PID_0}.
 \begin{figure}[t]
     
     \textbf{E=\num{6.81}}
@@ -358,3 +358,177 @@ Podczas wczesniejszego strojenia zauważono fakt, iż zmniejszenie członu róż
     
 \end{figure}
 \FloatBarrier
+
+\subsection{Końcowe dostrojenie}
+
+Analogicznie jak w kroku \ref{PID_START} przeprowadzono dużą liczbę symulacji dla wielu kombinacji paramterów, nieznacznie oddalonych od obecnych. W ten sposób znaleziono ich optymalną wartosc równą: $K_{\mathrm{r}}$=\num{3.3}, $T_{\mathrm{i}}$=\num{9.25}, $T_{\mathrm{d}}$=\num{0.0005}. Wyniki symulacji dla takiego regulatora zostały przedstawione na rysunku \ref{PID_5}.
+
+\begin{figure}[t]
+    
+    \textbf{E=\num{4.82}}
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+    width=0.98\textwidth,
+    xmin=0,xmax=1200,ymin=0.4, ymax=1.2,
+    xlabel={$k$},
+    ylabel={$y[k]$},
+    xtick={0, 300,600,900,1200},
+    ytick={0.4,0.6,0.8,1.0,1.2},
+    legend pos=south east,
+    y tick label style={/pgf/number format/1000 sep=},
+    ]
+    \addplot[blue, semithick] file{rysunki/PROJ1_PID_EXPerror=4.82K=3.3Ti=9.25Td=0.0005.txt};
+    \addplot[red, semithick] file{rysunki/PROJ1_4_Yzad.txt};
+    \addlegendentry{$y[k]$},
+    \addlegendentry{$y^{zad}[k]$},
+    \addlegendimage{no markers, blue}
+	\addlegendimage{no markers, red}
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Wyjscie dla $K_{\mathrm{r}}$=\num{0.8},  $T_{\mathrm{i}}$=\num{5}, $T_{\mathrm{d}}$=\num{0.05}}
+    \label {PID_4}
+\end{figure}
+
+\begin{figure}[b]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+    width=0.98\textwidth,
+    xmin=0,xmax=1200,ymin=1.2, ymax=2.8,
+    xlabel={$k$},
+    ylabel={$u[k]$},
+    xtick={0, 300,600,900,1200},
+    ytick={1.2,1.6,2.0,2.4,2.8},
+    legend pos=south east,
+    y tick label style={/pgf/number format/1000 sep=},
+    ]
+    \addplot[const plot, blue, semithick] file{rysunki/PROJ1_PID_EXP_STERerror=4.82K=3.3Ti=9.25Td=0.0005.txt};
+    \legend{$u[k]$}
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Sterowanie dla $K_{\mathrm{r}}$=\num{0.8},  $T_{\mathrm{i}}$=\num{5}, $T_{\mathrm{d}}$=\num{0.05} }
+    
+\end{figure}
+\FloatBarrier
+
+
+\section{Automatyczne strojenie regulatora PID}
+
+Do automatycznego strojenia regulatora PID użyto już wczeniej używanej funkcji \verb+doPID.m+, której użyto jako funkcji liczącej wartosć wskaźnik jakosci (funkcja ją zwraca) w maltabowskim algorytmie \verb+fmincon+, której użyto w skrypcie \verb+PIDOptimizer.m+. Przeprowadzono dwie próby: dla małych wartosci parametrów początkowych oraz dla dużych wartosci kryteriów początkowych, co widać w listiingu \ref{LIST_1} poniżej.
+
+\begin{lstlisting}[style=custommatlab,frame=single,label={zad4_sim_lst},caption={Implementacja automatycznego strojenia PID},captionpos=b]
+
+x01=[1,1,1];
+x02=[20,20,20];
+lb=[0.01,0.01,0.01];
+ub=[50,50,50];
+paras=fmincon(@doPID,x0,[],[],[],[],lb,ub);
+
+\label{LIST_1}
+\end{lstlisting}
+
+Wyniki pracy dla pierwszego regulatora przedstawiono na rysunku \ref{PID_AUTO1}, a drugiego na rysunku \ref{PID_AUTO2}.
+
+\begin{figure}[t]
+    
+    \textbf{E=\num{4.84}}
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+    width=0.98\textwidth,
+    xmin=0,xmax=1200,ymin=0.4, ymax=1.2,
+    xlabel={$k$},
+    ylabel={$y[k]$},
+    xtick={0, 300,600,900,1200},
+    ytick={0.4,0.6,0.8,1.0,1.2},
+    legend pos=south east,
+    y tick label style={/pgf/number format/1000 sep=},
+    ]
+    \addplot[blue, semithick] file{rysunki/PROJ1_PID_OPTK=3.2526Ti=18.6051Td=0.01error=4.8389.txt};
+    \addplot[red, semithick] file{rysunki/PROJ1_4_Yzad.txt};
+    \addlegendentry{$y[k]$},
+    \addlegendentry{$y^{zad}[k]$},
+    \addlegendimage{no markers, blue}
+    \addlegendimage{no markers, red}
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Wyjscie dla $K_{\mathrm{r}}$=\num{3.25},  $T_{\mathrm{i}}$=\num{9.3}, $T_{\mathrm{d}}$=\num{0.005}}
+    \label {PID_AUTO1}
+\end{figure}
+
+\begin{figure}[b]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+    width=0.98\textwidth,
+    xmin=0,xmax=1200,ymin=1.2, ymax=2.8,
+    xlabel={$k$},
+    ylabel={$u[k]$},
+    xtick={0, 300,600,900,1200},
+    ytick={1.2,1.6,2.0,2.4,2.8},
+    legend pos=south east,
+    y tick label style={/pgf/number format/1000 sep=},
+    ]
+    \addplot[const plot, blue, semithick] file{rysunki/PROJ1_PID_OPT_STERK=3.2526Ti=18.6051Td=0.01error=4.8389.txt};
+    \legend{$u[k]$}
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Wyjscie dla $K_{\mathrm{r}}$=\num{3.25},  $T_{\mathrm{i}}$=\num{9.3}, $T_{\mathrm{d}}$=\num{0.005}}
+    
+\end{figure}
+
+
+\begin{figure}[h]
+    
+    \textbf{E=\num{5.35}}
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+    width=0.98\textwidth,
+    xmin=0,xmax=1200,ymin=0.4, ymax=1.2,
+    xlabel={$k$},
+    ylabel={$y[k]$},
+    xtick={0, 300,600,900,1200},
+    ytick={0.4,0.6,0.8,1.0,1.2},
+    legend pos=south east,
+    y tick label style={/pgf/number format/1000 sep=},
+    ]
+    \addplot[blue, semithick] file{rysunki/PROJ1_PID_OPTK=2.7409Ti=5.8109Td=21.9071error=5.3527.txt};
+    \addplot[red, semithick] file{rysunki/PROJ1_4_Yzad.txt};
+    \addlegendentry{$y[k]$},
+    \addlegendentry{$y^{zad}[k]$},
+    \addlegendimage{no markers, blue}
+	\addlegendimage{no markers, red}
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Wyjscie dla $K_{\mathrm{r}}$=\num{2.74},  $T_{\mathrm{i}}$=\num{2.9}, $T_{\mathrm{d}}$=\num{10.95}}
+    \label {PID_AUTO2}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+    width=0.98\textwidth,
+    xmin=0,xmax=1200,ymin=1.2, ymax=2.8,
+    xlabel={$k$},
+    ylabel={$u[k]$},
+    xtick={0, 300,600,900,1200},
+    ytick={1.2,1.6,2.0,2.4,2.8},
+    legend pos=south east,
+    y tick label style={/pgf/number format/1000 sep=},
+    ]
+    \addplot[const plot, blue, semithick] file{rysunki/PROJ1_PID_OPT_STERK=2.7409Ti=5.8109Td=21.9071error=5.3527.txt};
+    \legend{$u[k]$}
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Sterowanie dla $K_{\mathrm{r}}$=\num{2.74},  $T_{\mathrm{i}}$=\num{2.9}, $T_{\mathrm{d}}$=\num{10.95} }
+    
+\end{figure}
+\FloatBarrier
+
+\section{Obserwacje i wnioski}
+
+Ręczne dostrojenie regulatora PID okazało się odrobinę lepsze, być może z uwagi na bardzo małą niską wartoć parametru $T_{\mathrm{d}}$, leżącego poza obszarem poszukiwań algorytmu. Z reguły jednak niemożliwe jest tak dobre ręczne nastrojenie, bez użycia znaczącej ilosci czasu, automatyczny optymalizator gwarantuje praktycznie najlepsze rozwiązanie, jednak nie jest możliwe jego zastosowanie dla obiektów rzeczywistych poza symulacją, najwyżej co do wstępnej estymacji parametrów przy użyciu zebranego modelu obiektu.
+
