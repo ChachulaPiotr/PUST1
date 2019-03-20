@@ -1,0 +1,33 @@
+\chapter{Zadanie 1}
+\label{zad1}
+
+\section{Opis postępowania}
+\label{zad1_opis}
+W celu sprawdzenia poprawności wartości sygnałów $U_{\mathrm{pp}}$ i $Y_{\mathrm{pp}}$ pobudzono obiekt sterowaniem
+o wartości $U_{\mathrm{pp}}= \num{2.0}$ i sprawdzeniu czy stabilizuje się on w punkcjie pracy  $Y_{\mathrm{pp}}= \num{2.0}$. Do symulacji wyjscia obiektu użyto udostępnionej funkcji 
+\verb+symulacja_obiektu4Y.+ Do testów użyto napisanego skryptu \verb+PROJ1_1.m. + Wyniki przedstawiono na poniżej.
+
+\section{Wyniki}
+\label{zad1_wyniki}
+Zgodnie z przewidywaniami wyjscie obiektu ustaliło się na wartości $Y_{\mathrm{pp}}= \num{2.0}$. Punkt pracy ustalony jest więc poprawnie.
+\begin{figure}[b]
+
+    \label{zad1_1_wykres}
+    \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+    width=\textwidth,
+    xmin=0,xmax=200,ymin=0,ymax=0.8,
+    xlabel={$k$},
+    ylabel={$y[k]$},
+    xtick={0, 50, 100, 150, 200},
+    ytick={0, 0.2, 0.4, 0.6, 0.8},
+    legend pos=south east,
+    y tick label style={/pgf/number format/1000 sep=},
+    ]
+    \addplot[red, semithick] file{rysunki/PROJ1_1.txt};
+    \legend{$y[k]$}
+    \end{axis} 
+    \end{tikzpicture}
+    \caption{Odpowiedź obiektu na sterowaniei $U_{\mathrm{pp}}=\num{0.8}$}
+\end{figure}
